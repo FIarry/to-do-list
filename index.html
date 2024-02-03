@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <p class="title">Мой список дел</p>
+            <div class="inputBlock">
+                <input type="text" placeholder="Что сделать..." id="nameInput">
+                <button id="myButton" class="addButton">Добавить</button>
+            </div>
+        </div>
+
+        <div class="warning hidden" id="warning">
+            <div class="frame">
+                <div class="deleteTitle">Удалить?</div>
+                <div class="itemName" id="itemNameDelete">Объект</div>
+                <div class="buttons">
+                    <button class="cancel" id="cancel">Отмена</button>
+                    <button class="delete" id="delete">Удалить</button>
+                </div>
+            </div>
+        </div>
+
+        <ul id="list"></ul>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
