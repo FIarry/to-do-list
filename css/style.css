@@ -31,6 +31,12 @@ input {
     border: 0;
 }
 
+.clrButton {
+    width: 10%;
+    height: 48%;
+    border: 0;
+}
+
 .wrapper {
     height: 100%;
     width: 100%;

@@ -1,6 +1,9 @@
 const myButton = document.querySelector('#myButton')
 const nameInput = document.querySelector('#nameInput')
+const clrButton = document.querySelector('#clrButton')
+const findInput = document.querySelector('#findInput')
 const list = document.querySelector('#list')
+
 
 let newElementList = function () {
     const newItem = document.createElement('li');
@@ -51,6 +54,20 @@ let newElementList = function () {
             newItem.appendChild(itemText)
         }
     })
+
+    findInput.addEventListener('keyup', (event) => {
+        if (list.childElementCount > 0) {
+            if (findInput.value != '') {
+                if ((newItem.textContent.toLowerCase()).indexOf((findInput.value).toLowerCase()) == -1) {
+                    newItem.classList.add('hidden')
+                } else {
+                    newItem.classList.remove('hidden')
+                }
+            } else {
+                newItem.classList.remove('hidden')
+            }
+        }
+    })
 }
 
 myButton.addEventListener('click', () => {
@@ -60,4 +77,8 @@ nameInput.addEventListener('keydown', (event) => {
     if (event.key == 'Enter') {
         newElementList()
     }
+})
+
+clrButton.addEventListener('click', () => {
+    findInput.value = ''
 })
